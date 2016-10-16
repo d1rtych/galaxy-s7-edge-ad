@@ -1,0 +1,371 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    width: 970px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+.banner .details,
+.banner .main,
+.banner .product-configuration {
+    float: left;
+}
+
+
+/*
+ * Start banner header
+ */
+.banner__header {
+    position: relative;
+    height: 15px;
+}
+
+.banner__header .close {
+    float: right;
+    color: black;
+    font-size: 11px;
+}
+
+.banner__header .close .icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 0 -8px 3px;
+    background: url("https://www.gstatic.com/ads/ci/ytclosebutton/1/close_black.png") 0 0 no-repeat;
+}
+/* End banner controls */
+
+
+/*
+ * Start Details
+ */
+.banner .details {
+    width: 220px;
+    height: 185px;
+    padding: 20px;
+    position: relative;
+}
+
+.details header .company {
+    display: block;
+    width: 75px;
+    height: 14px;
+    background: url("../img/T_SamsungLogo.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.details header .details__title {
+    display: block;
+    width: 190px;
+    height: 30px;
+    background: url("../img/T_GalaxyLogo.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+
+.details .details__body {
+    width: 210px;
+    position: absolute;
+    bottom: 0;
+}
+
+.details .details__body .information {
+    font-size: 24px;
+}
+/* End Details */
+
+
+/*
+ * Start Main
+ */
+.banner .main {
+    width: 450px;
+    height: 235px;
+    margin: 0 20px;
+    position: relative;
+}
+.main .product {
+    width: 465px;
+    height: 223px;
+    position: relative;
+    overflow: hidden;
+    background: url("../img/phone/phone_sprite.png") -28px 1px
+}
+.product iframe {
+    width: 365px;
+    height: 202px;
+    padding: 10px 0;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: 1000;
+}
+.main .item-container {
+    width: 465px;
+    height: 235px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in;
+    -moz-transition: all 300ms ease-in;
+    -web-kit-transition: all 300ms ease-in;
+}
+.item-container .rain-item {
+    transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -web-kit-transition: all 1s ease-in;
+}
+.item-container .rain-drop-1 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/raindrop_1.png") no-repeat;
+}
+.item-container .rain-drop-2 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    background: url("../img/raindrop_2.png") no-repeat;
+}
+.item-container .rain-drop-3 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    background: url("../img/raindrop_3.png") no-repeat;
+}
+.item-container .rain-drop-4 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    background: url("../img/raindrop_4.png") no-repeat;
+}
+
+.product .reflection {
+    width: 366px;
+    height: 202px;
+    position: absolute;
+    top: 11px;
+    left: 49px;
+    background: url(../img/970x250_highlights.png) -379px -25px no-repeat;
+    background-size: 995px 250px;
+}
+
+.product .flashlight {
+    display: none;
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    top: -65px;
+    left: -65px;
+    background: url("../img/flash.png") center no-repeat;
+    transition: background-size 0.15s ease-in;
+    -moz-transition: background-size 0.15s ease-in;
+    -web-kit-transition: background-size 0.15s ease-in;
+    background-size: 40%;
+}
+
+.product .memory-card {
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 141px;
+    left: 49px;
+    overflow: hidden;
+}
+
+.product .memory-card .lightning {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: -9px;
+    left: -10px;
+    background: url("../img/card_highlight.png") -45px 0 no-repeat;
+    background-size: 55px 60px;
+    transition: background-position 0.15s ease-in;
+    -moz-transition: background-position 0.15s ease-in;
+    -web-kit-transition: background-position 0.15s ease-in;
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+}
+.product .memory-card .socket {
+    width: 60px;
+    height: 40px;
+    position: relative;
+    display: none;
+    z-index: 3;
+    background: url("../img/internals_frame.png") -368px -155px no-repeat;
+}
+/* End main */
+
+
+/*
+ * Start Product configuration
+ */
+.banner .product-controls {
+    width: 190px;
+    height: 205px;
+    padding: 0 20px 20px 0;
+    float: right;
+    position: relative;
+}
+
+.product-controls .dragbar {
+    float: left;
+    width: 60px;
+}
+
+.product-controls .dragbar-hint {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product-controls .btn {
+    display: inline-block;
+    padding: 8px 20px;
+    position: absolute;
+    right: 38px;
+    bottom: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+}
+
+.product-controls .btn.action-btn {
+    background-color: #333;
+    color: white;
+}
+
+.dragbar {
+    padding: 25px 0;
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.dragbar input[type=range] {
+    width: 200px;
+    padding: 2px 0;
+    cursor: pointer;
+    border: 1px solid white;
+    -webkit-appearance: none;
+}
+
+.dragbar input[type=range]::-webkit-slider-runnable-track {
+    width: 190px;
+    height: 1px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+
+}
+
+.dragbar input[type=range]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    margin-top: -9px;
+    -webkit-appearance: none;
+    background: black;
+    cursor: move;
+    border: none;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.dragbar input[type=range]:focus {
+    outline: none;
+}
+
+.dragbar input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+.dragbar input[type=range]::-moz-range-track {
+    width: 190px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+.dragbar input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    background: goldenrod;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+/*hide the outline behind the border*/
+.dragbar input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+.dragbar input[type=range]::-ms-track {
+    width: 190px;
+    height: 5px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+}
+
+.dragbar input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.dragbar input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.dragbar input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    background: goldenrod;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.dragbar input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+
+.dragbar input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+/* End product configuration */
